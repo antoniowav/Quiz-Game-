@@ -1,21 +1,25 @@
-import { useState } from "react";
-import { answers } from "../objects/gameAnswers";
-import { questions } from "../objects/gameQuestions";
-import QuestionCard from "./QuestionCard";
+
+import { buttonStyle, card } from '../styles'
+import Start from '../assets/italian.jpeg'
+import { display, styleImage } from "../styles"
+
+interface Props {
+
+    setToggle: any
+}
 
 
-export const Title = () => {
+export function Title(props: Props) {
 
-    const [toggleBtn, setToggle] = useState(false)
-    
     return (
-      <div>
-        <h1 className='Title' >Are you a real Italian?</h1>
-        <button className='Button' onClick={() => setToggle(!toggleBtn)}>Play Now!</button>
-        {toggleBtn && <QuestionCard test={questions} test2={answers} />}
 
-      </div>
-    );
-  };
+        <div style={card} className="Container">
+          <h1 className='Title'>Are you a real Italian?</h1>
+          <img style={styleImage} src={Start} alt="" />
+          <button style={buttonStyle} className='Button' onClick={() => props.setToggle(true)}>Play Now!</button>
+        </div>
+    )
+
+  }
   
-  export default Title
+export default Title
