@@ -1,16 +1,24 @@
 
 
-export interface GameInterface {
+export interface Question  {
     question: string,
-    id: number,
     answeredQuestions?: number,
-    img?: string
-
+    img?: Image,
+    answer: ButtonStuff[]
 }
 
 export interface ButtonStuff {
-    text: string,
-    buttonId: number
+    input?: boolean,
+    text: string, 
+    path: number,
+    id?: number
 }
 
-/* add interface - number of question? */
+export interface Image {
+    id: number,
+    name: string,
+    image: string
+}
+
+
+export default Question 

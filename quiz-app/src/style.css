@@ -1,5 +1,5 @@
 body{
-    background-color: #a7a7a7;
+    background-color: #ffffff;
   }
   
   .Layout {
@@ -31,7 +31,6 @@ body{
     transition: .2s ease-in-out;
     opacity: 1;
     cursor: pointer;
-      
   }
 
 
